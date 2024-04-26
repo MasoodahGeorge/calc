@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1><div class="title-bar">
+            <div class="left">
+                <i class="fa-duotone fa-calculator"></i>
+                <span class="title">Calculator</span>
+            </div></h1>
+    <form>
+        <input type="text" value="  " disabled class="display2" name="display2">
+        <input type="text" value="0" disabled class="display" name="display">
+    
+        <div class="memory">
+            <button class="mry off" value="mc">MC</button>
+            <button class="mry off" value="mr">MR</button>
+            <button class="mry on" value="m+">M+</button>
+            <button class="mry on" value="m-">M-</button>
+            <button class="mry on" value="ms">MS</button>
+            <button class="mry off" value="m">M<i class="fa fa-chevron-down fa-2xs"></i></button>
+        </div>
+    
+        <div class="buttons">
+    
+            <input type="button" name="btn" class="btn" value="%" onclick="display2.value +'/100';
+            display.value = display.value / 100">
+    
+            <input type="button" name="btn" class="btn" value="CE" onclick="display.value = '0'">
+    
+            <input type="button" name="btn" class="btn" value="C" onclick="display.value = 0; display2.value = ' '">
+    
+            <input type="button" name="btn" class="btn" 
+            value="Del" onclick="display.value =
+            display.value.toString().slice(0,-1)">
+    
+            <input type="button" name="btn" class="btn" 
+            value="1/x" onclick="display2.value ='1/(' + display.value +')'; display.value = eval(1/display.value)">
+    
+            <input type="button" name="btn" class="btn " value="x &#178;" onclick="display2.value = 'sqr(' + display.value + ')'; display.value = eval(Math.pow(display.value, 2))">
+    
+            <input type="button" name="btn" class="btn num" value="8" onclick="
+                    if (display.value === '0'){
+                        display.value = 8
+                    } else {
+                        display.value += 8;
+                    }">
+    
+            <input type="button" name="btn" class="btn num" value="9" onclick="
+                    if (display.value === '0'){
+                        display.value = 9
+                    } else {
+                        display.value += 9;
+                    }">
+    
+            <input type="button" name="btn" class="btn" value="&#xd7;" onclick="display.value += '*'">
+    
+          <input type="button" name="btn" class="btn num" value="4" onclick="
+                    if (display.value === '0'){
+                        display.value = 4
+                    } else {
+                        display.value += 4;
+                    }
+                    ">
+    
+            <input type="button" name="btn" class="btn num" value="5" onclick="
+                    if (display.value === '0'){
+                        display.value = 5
+                    } else {
+                        display.value += 5;
+                    }">
+    
+            <input type="button" name="btn" class="btn num" value="6" onclick="
+                    if (display.value === '0'){
+                        display.value = 6
+                    } else {
+                        display.value += 6;
+                    }">
+    
+            <input type="button" name="btn" class="btn" value="&#x2212;" onclick="display.value += '-'">
+    
+          <input type="button" name="btn" class="btn num" value="1" onclick="
+                            if (display.value === '0'){
+                        display.value = 1
+                    } else {
+                        display.value += 1;
+                    }">
+    
+            <input type="button" name="btn" class="btn num" value="2" onclick="
+                            if (display.value === '0'){
+                        display.value = 2
+                    } else {
+                        display.value += 2;
+                    }">
+    
+            <input type="button" name="btn" class="btn num" value="3" onclick="if (display.value === '0'){
+                        display.value = 3
+                    } else {
+                        display.value += 3;
+                    }">
+    
+          <input type="button" name="btn" class="btn" value="+" onclick="display.value += '+'">
+    
+          <input type="button" class="btn" value="+/-" onclick=" 
+                        if (display.value.startsWith('-')){
+                            display.value = display.value.toString().slice(1)
+                        } else if(display.value === '0') {
+                            display.value = 0
+                        } else {
+                            display.value ='-' + display.value
+                        }">
+    
+            <input type="button" name="btn" class="btn" value="." onclick="display.value += '.'">
+    
+          <input type="button" name="btn" class="btn eq" value="=" onclick="display2.value = display.value + '='; display.value = eval(display.value); ">
+    
+        </div>
+    
+    </div>
+    
+    </form>
+    
+    </div>
+    
+</body>
+</html>
